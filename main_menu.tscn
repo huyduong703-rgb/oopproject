@@ -1,0 +1,775 @@
+[gd_scene format=3 uid="uid://dw7ljfn2qrj13"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+bg_color = Color(0.05, 0.25, 0.35, 0.95)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.2, 0.95, 1, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0.1, 0.9, 1, 0.55)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn"]
+bg_color = Color(0.03, 0.1, 0.18, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.75, 0.95, 1, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed"]
+bg_color = Color(0.04, 0.3, 0.2, 0.95)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.4, 1, 0.6, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0.3, 1, 0.5, 0.5)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_scifi_panel"]
+bg_color = Color(0.04, 0.1, 0.18, 0.97)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.45, 0.52, 0.58, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(0.1, 0.8, 1, 0.4)
+shadow_size = 20
+
+[sub_resource type="Theme" id="Theme_menu"]
+Button/colors/font_color = Color(0.72, 0.88, 0.97, 1)
+Button/colors/font_focus_color = Color(0.9, 1, 1, 1)
+Button/colors/font_hover_color = Color(0.5, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0.45, 1, 0.65, 1)
+Button/font_sizes/font_size = 24
+Button/styles/focus = SubResource("StyleBoxFlat_btn_hover")
+Button/styles/hover = SubResource("StyleBoxFlat_btn_hover")
+Button/styles/normal = SubResource("StyleBoxFlat_btn")
+Button/styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+Label/colors/font_color = Color(0.8, 0.97, 1, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_scifi_panel")
+
+[sub_resource type="Gradient" id="Gradient_bg"]
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(0.42, 0.32, 0.82, 1, 0.14, 0.12, 0.42, 1, 0.03, 0.04, 0.14, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bg"]
+gradient = SubResource("Gradient_bg")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.15, 0.05)
+fill_to = Vector2(1.1, 1)
+
+[sub_resource type="Gradient" id="Gradient_glow_purple"]
+colors = PackedColorArray(0.7, 0.55, 1, 0.5, 0.7, 0.55, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_glow_purple"]
+gradient = SubResource("Gradient_glow_purple")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_glow_blue"]
+colors = PackedColorArray(0.55, 0.85, 1, 0.35, 0.55, 0.85, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_glow_blue"]
+gradient = SubResource("Gradient_glow_blue")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_dust"]
+offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
+colors = PackedColorArray(0.3, 0.95, 1, 0, 0.3, 0.95, 1, 0.9, 0.3, 0.95, 1, 0.7, 0.3, 0.95, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_titlebar"]
+bg_color = Color(0.03, 0.15, 0.25, 0.95)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.2, 0.9, 1, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0.1, 0.9, 1, 0.5)
+shadow_size = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_red"]
+bg_color = Color(0.5, 0.06, 0.08, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.35, 0.35, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(1, 0.2, 0.2, 0.4)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_red_hover"]
+bg_color = Color(0.7, 0.1, 0.12, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.65, 0.65, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(1, 0.2, 0.2, 0.6)
+shadow_size = 14
+
+[sub_resource type="Gradient" id="Gradient_grab"]
+colors = PackedColorArray(0.85, 1, 1, 1, 0.85, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_grab"]
+gradient = SubResource("Gradient_grab")
+width = 12
+height = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slider_track"]
+content_margin_top = 7.0
+content_margin_bottom = 7.0
+bg_color = Color(0.04, 0.25, 0.3, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slider_fill"]
+content_margin_top = 7.0
+content_margin_bottom = 7.0
+bg_color = Color(0.1, 0.92, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_green"]
+bg_color = Color(0.04, 0.45, 0.18, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.3, 1, 0.5, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.2, 1, 0.4, 0.4)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_green_hover"]
+bg_color = Color(0.08, 0.62, 0.26, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.6, 1, 0.75, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.2, 1, 0.4, 0.6)
+shadow_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cyan"]
+bg_color = Color(0.04, 0.15, 0.22, 0.95)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.7, 0.95, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cyan_hover"]
+bg_color = Color(0.06, 0.28, 0.38, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.2, 0.95, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.1, 0.9, 1, 0.5)
+shadow_size = 12
+
+[sub_resource type="Animation" id="Animation_idle"]
+resource_name = "idle"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TitleLabel:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.25, 0.95, 1, 1), Color(0.8, 1, 1, 1), Color(0.25, 0.95, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ScanLine:offset_top")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-4.0, 648.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ScanLine:offset_bottom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 652.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_menu"]
+_data = {
+&"idle": SubResource("Animation_idle")
+}
+
+[node name="Control" type="MainMenu" unique_id=1984301529]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_menu")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1172461918]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_bg")
+expand_mode = 1
+
+[node name="GlowPurple" type="TextureRect" parent="." unique_id=1953991685]
+layout_mode = 0
+offset_left = -200.0
+offset_top = -260.0
+offset_right = 560.0
+offset_bottom = 500.0
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_glow_purple")
+expand_mode = 1
+
+[node name="GlowBlue" type="TextureRect" parent="." unique_id=1414685736]
+layout_mode = 0
+offset_left = 660.0
+offset_top = -200.0
+offset_right = 1260.0
+offset_bottom = 400.0
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_glow_blue")
+expand_mode = 1
+
+[node name="ScanLine" type="ColorRect" parent="." unique_id=1646157971]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0.3, 0.95, 1, 0.12)
+
+[node name="CyanDust" type="CPUParticles2D" parent="." unique_id=59667790]
+position = Vector2(576, 650)
+amount = 45
+lifetime = 7.0
+preprocess = 7.0
+emission_shape = 3
+emission_rect_extents = Vector2(600, 6)
+direction = Vector2(0, -1)
+spread = 15.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 25.0
+initial_velocity_max = 60.0
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+color_ramp = SubResource("Gradient_dust")
+
+[node name="TitleBar" type="Panel" parent="." unique_id=1647657336]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -280.0
+offset_top = 28.0
+offset_right = 280.0
+offset_bottom = 140.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_titlebar")
+
+[node name="MenuFrame" type="Panel" parent="." unique_id=362854217]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -110.0
+offset_right = 190.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_scifi_panel")
+
+[node name="FrameDeco" type="Control" parent="." unique_id=1636058963]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="FrameTL" type="Line2D" parent="FrameDeco" unique_id=1165445144]
+points = PackedVector2Array(-196, -80, -196, -116, -160, -116)
+width = 4.0
+default_color = Color(0.3, 0.95, 1, 1)
+
+[node name="FrameTR" type="Line2D" parent="FrameDeco" unique_id=134212361]
+points = PackedVector2Array(160, -116, 196, -116, 196, -80)
+width = 4.0
+default_color = Color(0.3, 0.95, 1, 1)
+
+[node name="FrameBL" type="Line2D" parent="FrameDeco" unique_id=1077658352]
+points = PackedVector2Array(-196, 170, -196, 206, -160, 206)
+width = 4.0
+default_color = Color(0.3, 0.95, 1, 1)
+
+[node name="FrameBR" type="Line2D" parent="FrameDeco" unique_id=1485824690]
+points = PackedVector2Array(160, 206, 196, 206, 196, 170)
+width = 4.0
+default_color = Color(0.3, 0.95, 1, 1)
+
+[node name="TitleTL" type="Line2D" parent="FrameDeco" unique_id=1552540926]
+points = PackedVector2Array(-286, -272, -286, -302, -256, -302)
+width = 4.0
+default_color = Color(0.3, 0.95, 1, 1)
+
+[node name="TitleTR" type="Line2D" parent="FrameDeco" unique_id=1948912431]
+points = PackedVector2Array(256, -302, 286, -302, 286, -272)
+width = 4.0
+default_color = Color(0.3, 0.95, 1, 1)
+
+[node name="TitleBL" type="Line2D" parent="FrameDeco" unique_id=2110834373]
+points = PackedVector2Array(-286, -208, -286, -178, -256, -178)
+width = 4.0
+default_color = Color(0.3, 0.95, 1, 1)
+
+[node name="TitleBR" type="Line2D" parent="FrameDeco" unique_id=662797972]
+points = PackedVector2Array(256, -178, 286, -178, 286, -208)
+width = 4.0
+default_color = Color(0.3, 0.95, 1, 1)
+
+[node name="FrameTab" type="Line2D" parent="FrameDeco" unique_id=270339906]
+points = PackedVector2Array(-50, 206, 50, 206)
+width = 6.0
+default_color = Color(0.3, 0.95, 1, 1)
+
+[node name="FrameTabTop" type="Line2D" parent="FrameDeco" unique_id=69837498]
+points = PackedVector2Array(-50, -116, 50, -116)
+width = 6.0
+default_color = Color(0.3, 0.95, 1, 1)
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1322231596]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -270.0
+offset_top = 32.0
+offset_right = 270.0
+offset_bottom = 96.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.2, 0.3, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 50
+text = "ĐÀO VÀNG KIỂU US"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="." unique_id=1947923799]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -270.0
+offset_top = 96.0
+offset_right = 270.0
+offset_bottom = 132.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.75, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "ĐỒ ÁN OOP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=119242643]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -80.0
+offset_right = 140.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="BtnPlay" type="Button" parent="VBoxContainer" unique_id=1498402926]
+custom_minimum_size = Vector2(280, 52)
+layout_mode = 2
+text = "BẮT ĐẦU"
+
+[node name="BtnSetting" type="Button" parent="VBoxContainer" unique_id=6604507]
+custom_minimum_size = Vector2(280, 52)
+layout_mode = 2
+text = "CÀI ĐẶT"
+
+[node name="BtnCredits" type="Button" parent="VBoxContainer" unique_id=1755488646]
+custom_minimum_size = Vector2(280, 52)
+layout_mode = 2
+text = "GIỚI THIỆU"
+
+[node name="BtnQuit" type="Button" parent="VBoxContainer" unique_id=1678949485]
+custom_minimum_size = Vector2(280, 52)
+layout_mode = 2
+text = "THOÁT"
+
+[node name="ModeSelectPopup" type="PanelContainer" parent="." unique_id=682525329]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ModeSelectPopup" unique_id=775018305]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="ChooseModeLabel" type="Label" parent="ModeSelectPopup/VBoxContainer" unique_id=1299720295]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "CHỌN CHẾ ĐỘ"
+horizontal_alignment = 1
+
+[node name="BtnStory" type="Button" parent="ModeSelectPopup/VBoxContainer" unique_id=1355887851]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+text = "CỐT TRUYỆN"
+
+[node name="BtnEndless" type="Button" parent="ModeSelectPopup/VBoxContainer" unique_id=2129111384]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+text = "VÔ TẬN"
+
+[node name="BtnBack" type="Button" parent="ModeSelectPopup/VBoxContainer" unique_id=271561593]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_red")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_red_hover")
+theme_override_styles/hover = SubResource("StyleBoxFlat_red_hover")
+text = "QUAY LẠI"
+
+[node name="SettingsOverlay" type="ColorRect" parent="." unique_id=1774325845]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03, 0.02, 0.12, 0.8)
+
+[node name="Panel" type="PanelContainer" parent="SettingsOverlay" unique_id=2118841793]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -200.0
+offset_right = 380.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="SettingsOverlay/Panel" unique_id=1285642921]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 30
+
+[node name="VBox" type="VBoxContainer" parent="SettingsOverlay/Panel/Margin" unique_id=1961713531]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="SettingsTitle" type="Label" parent="SettingsOverlay/Panel/Margin/VBox" unique_id=1972669486]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.2, 0.3, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 40
+text = "CÀI ĐẶT"
+horizontal_alignment = 1
+
+[node name="TitleLine" type="ColorRect" parent="SettingsOverlay/Panel/Margin/VBox" unique_id=822893003]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+color = Color(0.1, 0.92, 1, 0.8)
+
+[node name="MusicRow" type="HBoxContainer" parent="SettingsOverlay/Panel/Margin/VBox" unique_id=2021536389]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="MusicLabel" type="Label" parent="SettingsOverlay/Panel/Margin/VBox/MusicRow" unique_id=495735193]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.97, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "NHẠC NỀN"
+vertical_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="SettingsOverlay/Panel/Margin/VBox/MusicRow" unique_id=596673895]
+custom_minimum_size = Vector2(380, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_icons/grabber = SubResource("GradientTexture2D_grab")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_grab")
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_track")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_fill")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_fill")
+value = 80.0
+
+[node name="MusicValue" type="Label" parent="SettingsOverlay/Panel/Margin/VBox/MusicRow" unique_id=1658760200]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "80%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SfxRow" type="HBoxContainer" parent="SettingsOverlay/Panel/Margin/VBox" unique_id=1222187107]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="SfxLabel" type="Label" parent="SettingsOverlay/Panel/Margin/VBox/SfxRow" unique_id=1025140866]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.97, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "HIỆU ỨNG"
+vertical_alignment = 1
+
+[node name="SfxSlider" type="HSlider" parent="SettingsOverlay/Panel/Margin/VBox/SfxRow" unique_id=1212372253]
+custom_minimum_size = Vector2(380, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_icons/grabber = SubResource("GradientTexture2D_grab")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_grab")
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_track")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_fill")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_fill")
+value = 80.0
+
+[node name="SfxValue" type="Label" parent="SettingsOverlay/Panel/Margin/VBox/SfxRow" unique_id=1039352256]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "80%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="BtnSettingBack" type="Button" parent="SettingsOverlay/Panel/Margin/VBox" unique_id=1219187333]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_green")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_green_hover")
+theme_override_styles/hover = SubResource("StyleBoxFlat_green_hover")
+text = "XÁC NHẬN"
+
+[node name="CreditsOverlay" type="ColorRect" parent="." unique_id=1698365324]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03, 0.02, 0.12, 0.8)
+
+[node name="Panel" type="PanelContainer" parent="CreditsOverlay" unique_id=137447130]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -230.0
+offset_right = 320.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="CreditsOverlay/Panel" unique_id=15761349]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 30
+
+[node name="VBox" type="VBoxContainer" parent="CreditsOverlay/Panel/Margin" unique_id=1124835162]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="CreditsTitle" type="Label" parent="CreditsOverlay/Panel/Margin/VBox" unique_id=1345094216]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
+theme_override_colors/font_outline_color = Color(0.02, 0.2, 0.3, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 40
+text = "GIỚI THIỆU"
+horizontal_alignment = 1
+
+[node name="TitleLine" type="ColorRect" parent="CreditsOverlay/Panel/Margin/VBox" unique_id=609231039]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+color = Color(0.1, 0.92, 1, 0.8)
+
+[node name="AuthorHeader" type="Label" parent="CreditsOverlay/Panel/Margin/VBox" unique_id=1311190407]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "TÁC GIẢ"
+horizontal_alignment = 1
+
+[node name="Author1" type="Label" parent="CreditsOverlay/Panel/Margin/VBox" unique_id=235300619]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "Dương Quốc Huy"
+horizontal_alignment = 1
+
+[node name="Author2" type="Label" parent="CreditsOverlay/Panel/Margin/VBox" unique_id=1948867473]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "Trần Trí Dũng"
+horizontal_alignment = 1
+
+[node name="Author3" type="Label" parent="CreditsOverlay/Panel/Margin/VBox" unique_id=93105858]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "Nguyễn Vũ Nhật Minh"
+horizontal_alignment = 1
+
+[node name="Author4" type="Label" parent="CreditsOverlay/Panel/Margin/VBox" unique_id=986382499]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "Phạm Việt Linh"
+horizontal_alignment = 1
+
+[node name="ProjectLabel" type="Label" parent="CreditsOverlay/Panel/Margin/VBox" unique_id=1920656673]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.8, 0.9, 1)
+theme_override_font_sizes/font_size = 16
+text = "Đồ án Lập trình hướng đối tượng"
+horizontal_alignment = 1
+
+[node name="BtnCreditsBack" type="Button" parent="CreditsOverlay/Panel/Margin/VBox" unique_id=2103123839]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_cyan")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cyan_hover")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cyan_hover")
+text = "ĐÓNG"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1144441602]
+libraries/ = SubResource("AnimationLibrary_menu")
+autoplay = &"idle"
