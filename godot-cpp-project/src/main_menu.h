@@ -20,8 +20,9 @@ private:
     godot::Label *music_value_label = nullptr;
     godot::Label *sfx_value_label = nullptr;
 
-    godot::String story_scene_path;
-    godot::String endless_scene_path;
+    // Scene nap khi chon che do. Mac dinh ca hai deu vao game.tscn, doi trong Inspector neu can.
+    godot::String story_scene_path = godot::String("res://game.tscn");
+    godot::String endless_scene_path = godot::String("res://game.tscn");
 
     void _on_play_pressed();
     void _on_setting_pressed();
